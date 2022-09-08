@@ -6,7 +6,7 @@ pipeline {
       stage('Hello') {
          steps {
 			  script{
-				String date =new SimpleDateFormat("dd-MM-yyyy").format(new Date())
+				String elDia =new SimpleDateFormat("dd-MM-yyyy").format(new Date())
 				println "Hola Mundo! El día de hoy es "+ elDia +".\r\n Este curso me hizo programar mas de lo que me hubiese gustado"
 			  }
          }

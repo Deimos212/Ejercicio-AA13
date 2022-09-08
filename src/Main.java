@@ -59,7 +59,7 @@ public class Main {
 				+ "      stage('Hello') {\r\n"
 				+ "         steps {\r\n"
 				+ "			  script{\r\n"
-				+ "				String date =new SimpleDateFormat(\"dd-MM-yyyy\").format(new Date())\r\n"
+				+ "				String elDia =new SimpleDateFormat(\"dd-MM-yyyy\").format(new Date())\r\n"
 				+ "				println \""+bienvenida+"\"\r\n"
 				+ "			  }\r\n"
 				+ "         }\r\n"
