@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -61,21 +62,19 @@ public class Main {
 				+ "				String date =new SimpleDateFormat(\"dd-MM-yyyy\").format(new Date())\r\n"
 				+ "				println \""+bienvenida+"\"\r\n"
 				+ "			  }\r\n"
-				+ "             echo \""+sb.toString()+"\"\r\n"
 				+ "         }\r\n"
 				+ "      }\r\n"
 				+ "   }\r\n"
 				+ "}\r\n"
 				+ "");
-		
 		try {
-			Path file = Paths.get("Jenkinsfile");
-			Files.write(file, jenkinsLines, StandardCharsets.UTF_8);
+			Path jenkins = Paths.get("Jenkinsfile");
+			Files.write(jenkins, jenkinsLines, StandardCharsets.UTF_8);
+			Path top20 = Paths.get("top20_mejores_peliculas.txt");
+			Files.write(top20, Arrays.asList(sb.toString()), StandardCharsets.UTF_8);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 }
